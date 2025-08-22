@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
-export default function Header() {
+export default function Header({ authenticated }) {
     return (
         <header className="bg-background-primary text-white p-4 flex justify-between items-center">
             <Link href="/" className="flex items-center space-x-2">
@@ -34,11 +34,11 @@ export default function Header() {
                 </form>
             </div>
             <div className="space-x-4">
-                <button className="bg-button-background-secondary text-black px-4 py-2 rounded-lg hover:bg-button-background-hover-secondary transition">
+                <button className="bg-button-background-secondary text-foreground-quaternary px-4 py-2 rounded-lg hover:bg-button-background-hover-secondary transition">
                     + Create
                 </button>
                 <button className="bg-button-background-primary text-button-foreground-primary px-4 py-2 rounded-lg hover:bg-button-background-hover-primary transition">
-                    Log In
+                    {authenticated ? 'Profile' : 'Log In'}
                 </button>
             </div>
         </header>
