@@ -5,6 +5,23 @@
   --foreground: #171717;
 }
 
+@theme {
+  --color-button-background-primary: #D57900;
+  --color-button-background-secondary: #FFFFFF;
+  --color-button-foreground-primary: #FFFFFF;
+  --color-button-foreground-secondary: #D57900;
+  --color-background-primary: #FFFFFF;
+  --color-background-secondary: #D57900;
+  --color-background-tertiary: #FFCB88;
+  --color-background-quaternary: #B76800;
+  --color-foreground-primary: #000000;
+  --color-foreground-secondary: #FFFFFF;
+  --color-foreground-tertiary: #888888;
+  --color-input-background-primary: #FFFFFF;
+  --color-input-foreground-active: #000000;
+  --color-input-foreground-passive: #888888;
+}
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
