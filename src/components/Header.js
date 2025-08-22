@@ -1,7 +1,21 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 export default function Header({ authenticated }) {
+    const Router = useRouter();
+
+    const search = (e) => {
+        e.preventDefault();
+
+        const query = e.target[0].value;
+        if (query.trim()) {
+            Router.push(`/search?query=${encodeURIComponent(query)}`);
+        }
+    }
+
     return (
         <header className="bg-background-primary text-white p-4 flex justify-between items-center">
             <Link href="/" className="flex items-center space-x-2">
@@ -9,7 +23,10 @@ export default function Header({ authenticated }) {
                 <Image src="/BusinessName.png" alt="Business Name" width={150} height={50} />
             </Link>
             <div className="w-1/4">
-                <form className="text-black flex border border-gray-300 rounded-lg overflow-hidden hover:border-black transition">
+                <form
+                    className="text-black flex border border-gray-300 rounded-lg overflow-hidden hover:border-black transition"
+                    onSubmit={search}
+                >
                     <input
                         type="text"
                         placeholder="Search..."
