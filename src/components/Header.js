@@ -30,7 +30,7 @@ export default function Header({ authenticated }) {
                     <input
                         type="text"
                         placeholder="Search..."
-                        className="flex-grow px-4 py-2 focus:outline-none bg-input-background-primary text-input-foreground-active placeholder-input-foreground-passive"
+                        className="w-9/10 px-4 py-2 focus:outline-none bg-input-background-primary text-input-foreground-active placeholder-input-foreground-passive"
                     />
                     <button className="bg-gray-200 px-4 py-2 hover:bg-gray-300 transition">
                         <svg
