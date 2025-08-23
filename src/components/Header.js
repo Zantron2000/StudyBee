@@ -18,11 +18,16 @@ export default function Header({ authenticated }) {
 
     return (
         <header className="bg-background-primary text-white p-4 flex justify-between items-center">
-            <Link href="/" className="flex items-center space-x-2">
-                <Image src="/StudyBeeLogo.png" alt="StudyBee Logo" width={50} height={50} />
-                <Image src="/BusinessName.png" alt="Business Name" width={150} height={50} />
+            <div className="sm:hidden">
+                <svg xmlns="http://www.w3.org/2000/svg" className="text-black h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </div>
+            <Link href="/" className="flex items-center md:space-x-2">
+                <Image className="hidden lg:block" src="/StudyBeeLogo.png" alt="StudyBee Logo" width={50} height={50} />
+                <Image className="" src="/BusinessName.png" alt="Business Name" width={150} height={50} />
             </Link>
-            <div className="w-1/4">
+            <div className="w-1/3 hidden sm:block">
                 <form
                     className="text-black flex border border-gray-300 rounded-lg overflow-hidden hover:border-black transition"
                     onSubmit={search}
@@ -50,7 +55,7 @@ export default function Header({ authenticated }) {
                     </button>
                 </form>
             </div>
-            <div className="space-x-4">
+            <div className="space-x-4 hidden sm:block">
                 <button className="bg-button-background-secondary text-foreground-quaternary px-4 py-2 rounded-lg hover:bg-button-background-hover-secondary transition">
                     + Create
                 </button>
@@ -58,6 +63,7 @@ export default function Header({ authenticated }) {
                     {authenticated ? 'Profile' : 'Log In'}
                 </button>
             </div>
+            <div className="sm:hidden"></div>
         </header>
     );
 };
