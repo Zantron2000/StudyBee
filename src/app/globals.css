@@ -7,17 +7,56 @@
   --color-button-background-hover-secondary: #EEEEEE;
   --color-button-foreground-primary: #FFFFFF;
   --color-button-foreground-secondary: #D57900;
+
   --color-background-primary: #FFFFFF;
   --color-background-secondary: #D57900;
   --color-background-tertiary: #FFCB88;
   --color-background-quaternary: #B76800;
+
   --color-foreground-primary: #000000;
   --color-foreground-secondary: #FFFFFF;
   --color-foreground-tertiary: #888888;
   --color-foreground-quaternary: #D57900;
+
   --color-input-background-primary: #FFFFFF;
   --color-input-foreground-active: #000000;
   --color-input-foreground-passive: #888888;
+
+  --color-primary: #FFFFFF;
+  --color-primary-foreground: #000000;
+  --color-primary-foreground-passive: #717182;
+  --color-primary-border: rgba(0, 0, 0, 0.1);
+  --color-primary-hover: #F3F3F5;
+
+  --color-secondary: #ff6b35;
+  --color-secondary-foreground: #FFFFFF;
+
+  --color-tertiary: #000000;
+  --color-tertiary-foreground: #000000;
+  
+  --color-quaternary: #fefaee;
+  --color-quaternary-foreground: #000000;
+  --color-quaternary-foreground-passive: #666666;
+
+  --color-highlight: #ff6b35;
+
+  --color-input-background: #F3F3F5;
+  --color-input-foreground: #000000;
+  --color-input-placeholder: #717182;
+
+  --color-button-primary: #ff6b35;
+  --color-button-primary-foreground: #FFFFFF;
+  --color-button-primary-hover: #FFCB88;
+
+  --color-button-secondary: #FFFFFF;
+  --color-button-secondary-foreground: #ff6b35;
+  --color-button-secondary-border: #ff6b35;
+  --color-button-secondary-hover: #FFCB88;
+
+  --color-button-tertiary: #FFFFFF;
+  --color-button-tertiary-foreground: #000000;
+  --color-button-tertiary-border: #000000;
+  --color-button-tertiary-hover: #E0E0E0;
 }
 
 @theme inline {
