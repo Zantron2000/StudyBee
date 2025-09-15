@@ -8,21 +8,24 @@ import { useState } from "react";
 export default function Header({ authenticated }) {
     const [showSubjects, setShowSubjects] = useState(false);
     const [activeSubject, setActiveSubject] = useState(0);
+    const [openHamburger, setOpenHamburger] = useState(false);
+    const router = useRouter();
 
+    // TODO: Remove dummy data and fetch from backend
     const subjects = [
         { name: "Math", subs: ["Algebra", "Geometry", "Calculus A", "Calculus B", "Calculus C"] },
         { name: "Science", subs: ["Biology", "Chemistry"] },
         { name: "History", subs: ["Ancient", "Modern"] },
     ];
-    const Router = useRouter();
-    const [openHamburger, setOpenHamburger] = useState(false);
 
     const search = (e) => {
         e.preventDefault();
 
-        const query = e.target[0].value;
-        if (query.trim()) {
-            Router.push(`/search?query=${encodeURIComponent(query)}`);
+        const query = e.target[0].value?.trim();
+        if (query) {
+            router.push(`/search?query=${encodeURIComponent(query)}`);
+        } else {
+            router.push(`/search`);
         }
     }
 
@@ -34,10 +37,13 @@ export default function Header({ authenticated }) {
         <header className="bg-primary text-primary-foreground flex justify-center items-center h-16 border-b-1 border-primary-border">
             <div className="px-8 max-w-7xl w-full flex justify-between items-center">
                 {/** Logo */}
-                <div className="flex items-center text-highlight text-2xl font-bold">
+                <Link
+                    className="flex items-center text-highlight text-2xl font-bold"
+                    href={"/"}
+                >
                     <Image src={'/StudyBeeLogo.png'} alt="StudyBee Logo" width={50} height={30} />
                     <div>StudyBee</div>
-                </div>
+                </Link>
 
                 {/** Search Bar */}
                 <div className="w-1/3 hidden lg:block">
