@@ -30,6 +30,8 @@
 
   --color-secondary: #ff6b35;
   --color-secondary-foreground: #FFFFFF;
+  --color-secondary-foreground-passive: #DDDDDD;
+  --color-secondary-border: #FFFFFF;
 
   --color-tertiary: #000000;
   --color-tertiary-foreground: #000000;
@@ -55,8 +57,10 @@
 
   --color-button-tertiary: #FFFFFF;
   --color-button-tertiary-foreground: #000000;
+  --color-button-tertiary-foreground-passive: #717182;
   --color-button-tertiary-border: #000000;
   --color-button-tertiary-hover: #E0E0E0;
+  --color-button-tertiary-border-passive: #ececf0;
 }
 
 @theme inline {
