@@ -18,3 +18,4 @@
 14. Add z-index for subjects so it can prioritize.
 15. Make flashcards page mobile friendly.
 16. Ensure max length of terms and definitions handled properly in all pages.
+17. Make multiple choice display mobile friendly.
